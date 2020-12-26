@@ -1,96 +1,46 @@
 <!DOCTYPE html>
+
 <html>
 
     <head>
 
         <meta charset="UTF-8">
-
-        <script>
-            function computerPlay() {
-                let computerChoice = '';
-                let randomNum = Math.floor(Math.random() * Math.floor(3));
-
-                if(randomNum == 0) {
-                    computerChoice = 'rock';
-                }
-                else if(randomNum == 1) {
-                    computerChoice = 'paper';
-                }
-                else {
-                    computerChoice = 'scissors';
-                }
-                
-                console.log(computerChoice); /* console */
-                return computerChoice;
-            }
-
-            function playRound(playerSelection, computerSelection) {
-                const ROCK = "ROCK";
-                const PAPER = "PAPER";
-                const SCISSORS = "SCISSORS";
-                let result = "";
-
-                if(String(playerSelection).toUpperCase() === String(computerSelection).toUpperCase()) {
-                    result = playerSelection + ' vs ' + computerSelection + '! Tie!';
-                }
-                else if((String(playerSelection).toUpperCase() === ROCK) && (String(computerSelection).toUpperCase() === SCISSORS)) {
-                    result = playerSelection + ' vs ' + computerSelection + '! You win!';
-                }
-                else if((String(playerSelection).toUpperCase() === ROCK) && (String(computerSelection).toUpperCase() === PAPER)) {
-                    result = playerSelection + ' vs ' + computerSelection + '! You lose...';
-                }
-                else if((String(playerSelection).toUpperCase() === PAPER) && (String(computerSelection).toUpperCase() === ROCK)) {
-                    result = playerSelection + ' vs ' + computerSelection + '! You win!';
-                }
-                else if((String(playerSelection).toUpperCase() === PAPER) && (String(computerSelection).toUpperCase() === SCISSORS)) {
-                    result = playerSelection + ' vs ' + computerSelection + '! You lose...';
-                }
-                else if((String(playerSelection).toUpperCase() === SCISSORS) && (String(computerSelection).toUpperCase() === PAPER)) {
-                    result = playerSelection + ' vs ' + computerSelection + '! You win!';
-                }
-                else if((String(playerSelection).toUpperCase() === SCISSORS) && (String(computerSelection).toUpperCase() === ROCK)) {
-                    result = playerSelection + ' vs ' + computerSelection + '! You lose...';
-                }
-                else {
-                    alert("Enter a valid option: rock, paper, or scissors.");
-                    newPlayerSelection = prompt("Enter rock, paper, or scissors.");
-                    newComputerSelection = computerPlay();
-                    result = playRound(newPlayerSelection, newComputerSelection);
-                }
-
-                return result;
-            }
-
-            function game() {
-                let playerScore = 0;
-                let computerScore = 0;
-                
-                for(let round = 1; round < 6; round++) {
-                    let playerChoice = prompt("Enter rock, paper, or scissors.");
-                    let computerChoice = computerPlay();
-                    let result = playRound(playerChoice, computerChoice);
-                    
-                    console.log(result); /* console */
-
-                    if(result.indexOf("lose...") >= 0) {
-                        computerScore++;
-                    }
-                    else if(result.indexOf("win") >= 0) {
-                        playerScore++;
-                    }
-                }
-
-                alert("Player Score: " + playerScore + "\n\nComputer Score: " + computerScore);
-                console.log("Player Score: " + playerScore + "\n\nComputer Score: " + computerScore); /* console */
-            }
-
-            game();
-        </script>
+        <link rel="stylesheet" href="styles.css">
 
     </head>
 
     <body>
-        <!--body-->
+        
+        <div id="mainContainer">
+
+            <div id="titleContainer">
+                <div id="title">Rock, Paper, Scissors</div>
+                <div id="subtitle">by Richard Shin</div>
+            </div>
+    
+            <div id="choices">
+                <div class="playerChoice"></div>
+                <div class="computerChoice"></div>
+            </div>
+    
+            <div id="scoreContainer">
+                <div id="playerScore"></div>
+                <div id="computerScore"></div>
+            </div>
+
+            <div id="results">Get ready to play... First to 5 wins!<br>
+                Make a selection to begin the game.</div>
+    
+            <div id="buttonContainer">
+                <button id="rock" class="btn"></button>
+                <button id="paper" class="btn"></button>
+                <button id="scissors" class="btn"></button>
+            </div>
+
+        </div>
+
     </body>
+
+    <script src="script.js"></script>
 
 </html>

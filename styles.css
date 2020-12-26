@@ -1,0 +1,166 @@
+body {
+    background-color: rgb(112, 154, 233);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10vh;
+}
+
+#mainContainer {
+    margin: auto;
+    width: 100%;
+    min-width: 620px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#title {
+    font-size: 45px;
+}
+
+#subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#buttonContainer {
+    width: 600px;
+    margin: auto auto 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    background-size: contain;
+}
+
+.btn:hover {
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+#rock {
+    background-image: url(images/rock.png);
+}
+
+#paper {
+    background-image: url(images/paper.png);
+}
+
+#scissors {
+    background-image: url(images/scissors.png);
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.playerChoice {
+    width: 200px;
+    height: 200px;
+    margin-right: 100px;
+    transition: all 2.5s;
+    transition-delay: 0.5s;
+    opacity: 0%;
+    background-image: none;
+}
+
+.computerChoice {
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+    transition: all 2.5s;
+    transition-delay: 0.5s;
+    opacity: 0%;
+    background-image: none;
+}
+
+#scoreContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#playerScore {
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#computerScore {
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#results {
+    width: 607px;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgAppear-rock {
+    opacity: 100%;
+    background-image: url(images/rock.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.imgAppear-paper {
+    opacity: 100%;
+    background-image: url(images/paper.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.imgAppear-scissors {
+    opacity: 100%;
+    background-image: url(images/scissors.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.replayBtn {
+    margin-left: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(112, 154, 233);
+    cursor: pointer;
+    height: 45px;
+    width: 120px;
+    font-size: 16px;
+    color: black;
+    transition: all 0.7s;
+}
+
+.replayBtn:hover {
+    box-shadow: 0px 1px 6px rgb(77, 77, 77);
+    background-color: rgb(47, 74, 126);
+}
